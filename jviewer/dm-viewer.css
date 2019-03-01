@@ -1,0 +1,48 @@
+
+#auto {
+    width: 100%;
+    height: 100%;
+    margin: -40px 0 -24px 0;
+    padding: 40px 0 24px 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#contents {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#splitter {
+    text-align: center;
+    float: left;
+    height: 100%;
+    padding: 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#splitter #buttons {
+    margin: 0 0 15px 0;
+}
+#splitter #toTree {
+    margin: 40px 0 0 0;
+}
+#splitter #toCode {
+    margin: 20px 0 0 0;
+}
+button.convert {
+    cursor: default;
+    padding: 2px;
+}
+div.convert-right {
+    width: 25px;
+    height: 25px;
+    background: url(img/jsoneditor-icons.svg) 0 -48px;
+}
+div.convert-left {
+    width: 25px;
+    height: 25px;
+    background: url(img/jsoneditor-icons.svg) -24px -48px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- when using the mode "code", it's important to specify charset utf-8 -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link href="jviewer/jsoneditor.min.css" rel="stylesheet" type="text/css">
+    <link href="jviewer/dm-viewer.css" rel="stylesheet" type="text/css">
+    <script src="jviewer/jsoneditor.min.js"></script>
+</head>
+
+<body>
+    <div id="auto">
+        <div id="contents" class="row">
+            <div id="codeditor" class="col-5"></div>
+            <div id="splitter" class="col-1">
+                <div id="buttons">
+                    <div>
+                        <button id="toTree" class="convert" title="Copy code to tree editor (Ctrl + >)" onclick="toCovertToTree()">
+                            <div class="convert-right"></div>
+                        </button>
+                    </div>
+                    <div>
+                        <button id="toCode" class="convert" title="Copy tree to code editor (Ctrl + <)" onclick="toCovertToCode()">
+                            <div class="convert-left"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="jsoneditor" class="col-6"></div>
+        </div>
+    </div>
+
+    <script>
+        // create the code ditor
+        var codeditorEle = document.getElementById("codeditor");
+        var codeditor = new JSONEditor(codeditorEle, { mode: 'code', ace: ace });
+
+        // create the json editor
+        var jsoneditorEle = document.getElementById("jsoneditor");
+        var jsoneditor = new JSONEditor(jsoneditorEle, {});
+
+        jsoneditor.set({});
+        var json = jsoneditor.get();
+
+        function toCovertToTree() {
+            var jValue = codeditor.getText();
+            try {
+                var value = JSON.parse(jValue);
+                jsoneditor.set(value);
+            } catch (e) {
+                alert("Invalid JSON format!!");
+            }
+        }
+        function toCovertToCode() {
+
+        }
+    </script>
+</body>
+
+</html>
