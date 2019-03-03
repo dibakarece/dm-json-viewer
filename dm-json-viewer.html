@@ -13,10 +13,13 @@
 </head>
 
 <body>
+    <div id="header">
+        <label style="font-size: 22px; margin-left: 5px;margin-top:5px; ">DM JSON Viewer </label>
+    </div>
     <div id="auto">
-        <div id="contents" class="row">
-            <div id="codeditor" class="col-5"></div>
-            <div id="splitter" class="col-1">
+        <div id="contents" class="row" style="padding: 8px; margin: 0px;">
+            <div id="codeditor" class="col-5" style="padding: 0px;"></div>
+            <div id="splitter" class="col-1" style="padding: 0px;">
                 <div id="buttons">
                     <div>
                         <button id="toTree" class="convert" title="Copy code to tree editor (Ctrl + >)" onclick="toCovertToTree()">
@@ -30,10 +33,23 @@
                     </div>
                 </div>
             </div>
-            <div id="jsoneditor" class="col-6"></div>
+            <div id="jsoneditor" class="col-6" style="padding: 0px;"></div>
         </div>
     </div>
-
+    <div id="footer">
+        <div id="footer-inner">
+            <a href="https://github.com/dibakarece/dm-json-viewer" class="footer">DM JSON Viewer</a>
+            •
+            <a href="https://github.com/dibakarece/dm-json-viewer" target="_blank" class="footer">History</a>
+            •
+            <a href="https://github.com/dibakarece/dm-json-viewer" target="_blank" class="footer">Sourcecode</a>
+            •
+            <a href="https://github.com/dibakarece/dm-json-viewer/issues" target="_blank" class="footer">Report a bug</a>
+            •
+            <a href="datapolicy.txt" target="_blank" class="footer">Data policy</a>
+            • Copyright 2019 Dibakar Mistry
+        </div>
+    </div>
     <script>
         // create the code ditor
         var codeditorEle = document.getElementById("codeditor");

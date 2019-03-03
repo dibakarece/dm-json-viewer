@@ -1,4 +1,27 @@
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.42;
+    color: #333;
+    background-color: #fff;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#header {
+    width: 100%;
+    height: 40px;
+    background: #4a0066;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,.4);
+    color: #fff;
+}
 #auto {
     width: 100%;
     height: 100%;
@@ -14,6 +37,19 @@
     height: 100%;
     overflow: hidden;
 }
+
+#codeEditor{
+    left: 15px;
+    padding: 15px 0 15px 15px;
+}
+#codeEditor, jsonEditor{
+    height: 100%;
+    box-sizing: border-box
+}
+#jsonEditor{
+    padding: 15px 15px 15px 0;
+}
+
 #splitter {
     text-align: center;
     float: left;
@@ -45,4 +81,39 @@ div.convert-left {
     width: 25px;
     height: 25px;
     background: url(img/jsoneditor-icons.svg) -24px -48px;
+}
+a {
+    color: #4a0066;
+    text-decoration: none;
+    background-color: transparent;
+}
+a.header {
+    color: #fff;
+    text-decoration: none;
+}
+a:hover {
+    color: #4a0066;
+    text-decoration: underline;
+}
+a.footer {
+    color: #bfbfbf;
+    text-decoration: none;
+}
+a.footer:hover {
+    color: #4a0066;
+    text-decoration: underline;
+}
+#footer {
+    width: 100%;
+    height: 23px;
+    font-size: 10pt;
+    overflow: hidden;
+    color: #bfbfbf;
+    border-top: 1px solid #d3d3d3;
+    text-align: center;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,.1);
+}
+#footer-inner {
+    margin: 4px;
 }
