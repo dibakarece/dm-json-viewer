@@ -1,12 +1,12 @@
 dm-json-viewer
 ==================
-DM JSON Viewer is a web-based tool to view, edit, format, and validate JSON.It's built on "jsoneditor" [https://github.com/josdejong/jsoneditor]
+DM JSON Viewer is a web-based tool to view, edit, format, and validate JSON.It's built on top of "jsoneditor" [https://github.com/josdejong/jsoneditor]
 
 
 License
 =======
 
-    Copyright 2017 Dibakar Mistry
+    Copyright 2019 Dibakar Mistry
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
